@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/CardRow">
+
+    <com.advice.array.views.DeviceView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/guide_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/share_guide_1" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guide_2"
+        app:layout_constraintStart_toStartOf="@id/guide_1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="application data" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/share_guide_2" />
+
+    <TextView
+        android:id="@+id/security"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guide_3"
+        app:layout_constraintStart_toStartOf="@id/guide_2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Public" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/share_guide_3" />
+
+    <TextView
+        android:id="@+id/streams"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guide_3"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

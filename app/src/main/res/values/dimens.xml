@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="drawable_space">4dp</dimen>
+    <dimen name="status_icon_size">24dp</dimen>
+    <dimen name="progress_height">12dp</dimen>
+    <dimen name="icon_size">24dp</dimen>
+    <dimen name="section_icon_size">48dp</dimen>
+
+
+    <!--  Devices  -->
+    <dimen name="device_guide_1">0.25</dimen>
+    <dimen name="device_guide_2">0.45</dimen>
+    <dimen name="device_guide_3">0.60</dimen>
+    <dimen name="device_guide_4">0.72</dimen>
+
+    <!--  Shares  -->
+    <dimen name="share_guide_1">0.25</dimen>
+    <dimen name="share_guide_2">0.60</dimen>
+    <dimen name="share_guide_3">0.80</dimen>
+
+    <!--  Docker  -->
+    <dimen name="docker_icon_large">48dp</dimen>
+
+    <!--  Cpu Bar  -->
+    <dimen name="cpu_bar_corner_radius">8dp</dimen>
+    <dimen name="cpu_bar_height">12dp</dimen>
+
+    <!--  Corners  -->
+
+    <dimen name="progress_bar_corner_radius">0dp</dimen>
+    <dimen name="background_corner_radius">8dp</dimen>
+    <dimen name="status_dot">8dp</dimen>
+
+    <!--  Circular Progress View  -->
+    <dimen name="circular_progress_bar_size">120dp</dimen>
+    <dimen name="ring_thickness">12dp</dimen>
+    <dimen name="circular_progress_bar_size_small">40dp</dimen>
+    <dimen name="ring_thickness_small">4dp</dimen>
+
+    <dimen name="edit_text_stroke">2dp</dimen>
+
+    <dimen name="navigation_view_height">64dp</dimen>
+    <dimen name="button_spacer_height">16dp</dimen>
+    <dimen name="network_graph_height">90dp</dimen>
+    <dimen name="cpu_graph_height">250dp</dimen>
+
+
+</resources>

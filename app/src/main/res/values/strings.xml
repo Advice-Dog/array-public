@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Array</string>
+    <string name="load_x">%1$s</string>
+    <string name="ram">RAM</string>
+    <string name="flash">Flash</string>
+    <string name="docker">Docker</string>
+    <string name="log">Log</string>
+
+    <string name="status_channel_name">Status Notifications</string>
+    <string name="status_channel_description">Server status updates</string>
+    <string name="utilization">Utilization</string>
+    <string name="empty_usage">-</string>
+    <string name="shares">Shares</string>
+    <string name="array">Array</string>
+    <string name="dashboard">Dashboard</string>
+
+    <string name="login">Sign in</string>
+
+    <string name="notifications">Notifications</string>
+
+    <!--  Shutdown  -->
+    <string name="shutting_down">Shutting down…</string>
+    <string name="rebooting">Rebooting…</string>
+    <string name="settings">Settings</string>
+    <string name="server">Server</string>
+    <string name="containers">Containers</string>
+
+    <!--  Error messages  -->
+    <string name="empty_message">Nothing to display</string>
+    <string name="parity_error">Failed to get parity data</string>
+    <string name="empty_array_message">No devices to show</string>
+    <string name="no_docker_containers">No Docker Containers</string>
+    <string name="no_virtual_machines">No Virtual Machines</string>
+    <string name="no_shares">No shares</string>
+    <string name="no_notifications">No Notifications</string>
+
+
+</resources>

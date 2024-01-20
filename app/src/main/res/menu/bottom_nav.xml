@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/dashboard"
+        android:icon="@drawable/ic_baseline_dashboard_24"
+        android:title="Dashboard"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/disks"
+        android:icon="@drawable/ic_baseline_storage_24"
+        android:title="Disks"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/shares"
+        android:icon="@drawable/ic_baseline_folder_open_24"
+        android:title="Shares"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/containers"
+        android:icon="@drawable/ic_baseline_splitscreen_24"
+        android:title="Containers"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/server"
+        android:icon="@drawable/ic_baseline_desktop_windows_24"
+        android:title="Server"
+        app:showAsAction="always" />
+
+
+</menu>

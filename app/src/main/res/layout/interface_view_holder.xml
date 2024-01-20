@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/CardRow">
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        tools:text="eth0" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        tools:text="1000 Mbps, full duplex, mtu 1500" />
+
+</LinearLayout>

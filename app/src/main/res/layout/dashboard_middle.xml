@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/fragment_docker"
+        android:name="com.advice.array.dashboard.docker.DockerContainerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/docker_container_fragment" />
+
+    <include layout="@layout/divider" />
+
+    <fragment
+        android:id="@+id/fragment_vms"
+        android:name="com.advice.array.dashboard.vm.VirtualMachinesFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/dashboard_vm" />
+
+    <include layout="@layout/divider" />
+
+    <fragment
+        android:id="@+id/fragment_shares"
+        android:name="com.advice.array.dashboard.shares.SharesFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/dashboard_shares" />
+
+    <include layout="@layout/divider" />
+
+    <com.advice.array.views.CardHeaderView
+        android:id="@+id/cache_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleText="Users" />
+
+    <!--    <include layout="@layout/device_view_holder_header" />-->
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/cache_list"-->
+<!--        style="@style/CardList"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--        tools:itemCount="2"-->
+<!--        tools:listitem="@layout/device_view_holder" />-->
+
+</LinearLayout>

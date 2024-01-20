@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="customBackgroundColor" format="string|reference" />
+    <!--  Cards  -->
+    <attr name="customCardElevation" format="dimension|string" />
+    <attr name="customCardColor" format="string|reference" />
+    <attr name="customCardCornerRadius" format="dimension|string" />
+
+    <declare-styleable name="CardHeaderView">
+        <attr name="titleText" format="string|reference" />
+        <attr name="subtitleText" format="string|reference" />
+        <attr name="icon" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="UtilizationView">
+        <attr name="label" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="MemoryUsageView">
+        <attr name="memory_label" format="reference|string" />
+    </declare-styleable>
+
+    <declare-styleable name="ActionView">
+        <attr name="title" format="string|reference" />
+        <attr name="subtitle" format="string|reference" />
+        <attr name="actionIcon" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="NavigationView">
+        <attr name="navigationLabel" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="LoginField">
+        <attr name="fieldLabel" format="string|reference" />
+        <attr name="fieldHint" format="string|reference" />
+        <attr name="fieldInputType" format="enum">
+            <enum name="text" value="0" />
+            <enum name="password" value="1" />
+        </attr>
+        <attr name="fieldInputAutofillHint" format="enum">
+            <enum name="none" value="-1" />
+            <enum name="username" value="0" />
+            <enum name="password" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="SmallCircularProgressView">
+        <attr name="small_label" format="enum">
+            <enum name="hide" value="0" />
+            <enum name="show" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="DevicesListView">
+        <attr name="devicesListTitle" format="string|reference" />
+        <attr name="devicesListSubtitle" format="string|reference" />
+    </declare-styleable>
+</resources>

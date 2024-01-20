@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--  Background  -->
+    <color name="background">@color/black</color>
+    <color name="card_background">@color/black</color>
+
+    <color name="background_pressed">#353535</color>
+
+    <color name="notch">@color/white_20</color>
+
+    <color name="divider_color">@color/white_20</color>
+    <color name="highlight">@color/white_5</color>
+
+
+</resources>

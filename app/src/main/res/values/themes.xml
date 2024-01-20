@@ -1,0 +1,53 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Array" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/unraid_red</item>
+        <item name="colorPrimaryVariant">@color/unraid_red</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/blue</item>
+        <item name="colorSecondaryVariant">@color/blue</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/white</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <!-- Customize your theme here. -->
+
+        <item name="customBackgroundColor">@color/white</item>
+        <item name="customCardColor">@color/white</item>
+        <item name="customCardElevation">0dp</item>
+        <item name="customCardCornerRadius">0dp</item>
+
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="Theme.Array.Unraid">
+        <item name="android:statusBarColor" tools:targetApi="l">@color/background</item>
+        <item name="customBackgroundColor">@color/background</item>
+        <item name="customCardColor">@color/card_background</item>
+        <item name="customCardElevation">1dp</item>
+        <item name="customCardCornerRadius">0dp</item>
+    </style>
+
+    <style name="Theme.Array.Space">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#EBEBBC</item>
+        <item name="colorPrimaryVariant">#F21D41</item>
+        <item name="colorOnPrimary">#ffffff</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#EBEBBC</item>
+        <item name="colorSecondaryVariant">#BCE3C5</item>
+        <item name="colorOnSecondary">#ffffff</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">#292C37</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <!-- Customize your theme here. -->
+
+        <item name="customBackgroundColor">@color/space_background_color</item>
+        <item name="customCardColor">@color/space_background_color</item>
+        <item name="customCardElevation">0dp</item>
+        <item name="customCardCornerRadius">0dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="32dp"
+    tools:background="?colorSurface">
+
+    <View
+        android:id="@+id/notch"
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/notch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        style="@style/CardRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/icon"
+            style="@style/List.Item.Icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_cpu" />
+
+        <com.advice.array.views.StatusView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/icon"
+            app:layout_constraintEnd_toEndOf="@+id/icon" />
+
+        <TextView
+            android:id="@+id/app"
+            style="@style/List.Item.Label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toStartOf="@id/version"
+            app:layout_constraintStart_toEndOf="@+id/icon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="LibreELEC" />
+
+        <TextView
+            android:id="@+id/description"
+            style="@style/List.Item.Description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/icon"
+            app:layout_constraintTop_toBottomOf="@id/app"
+            tools:text="Home Office VM" />
+
+
+        <TextView
+            android:id="@+id/version"
+            style="@style/List.Item.Description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--    <include layout="@layout/divider" />-->
+
+            <!--    <include layout="@layout/divider" />-->
+
+            <com.advice.array.views.ActionView
+                android:id="@+id/action_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:actionIcon="@drawable/ic_baseline_play_arrow_24"
+                app:subtitle="Start the virtual machine"
+                app:title="Start" />
+
+            <com.advice.array.views.ActionView
+                android:id="@+id/action_resume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:actionIcon="@drawable/ic_baseline_play_arrow_24"
+                app:subtitle="Resume the virtual machine"
+                app:title="Resume" />
+
+            <com.advice.array.views.ActionView
+                android:id="@+id/action_pause"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:actionIcon="@drawable/ic_baseline_pause_24"
+                app:subtitle="Pause the virtual machine"
+                app:title="Pause" />
+
+            <com.advice.array.views.ActionView
+                android:id="@+id/action_stop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:actionIcon="@drawable/ic_baseline_stop_24"
+                app:subtitle="Shut down the virtual machine"
+                app:title="Stop" />
+
+            <com.advice.array.views.ActionView
+                android:id="@+id/action_restart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:actionIcon="@drawable/ic_baseline_restart_alt_24"
+                app:subtitle="Restart the virtual machine"
+                app:title="Restart" />
+
+            <com.advice.array.views.ActionView
+                android:id="@+id/action_destroy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:actionIcon="@drawable/ic_baseline_dangerous_24"
+                app:subtitle="Force shut down the virtual machine"
+                app:title="Force Stop" />
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?colorSurface"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminateTint="?colorSecondary" />
+
+        </FrameLayout>
+    </FrameLayout>
+
+
+</LinearLayout>

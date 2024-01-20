@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="?customBackgroundColor">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?customBackgroundColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:liftOnScroll="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentInsetStart="0dp">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/ToolbarTitle.Center"
+                tools:text="Tower • 192.168.1.69" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--    Registration    -->
+            <com.advice.array.views.CardHeaderView
+                android:id="@+id/server_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:subtitleText="Media server"
+                tools:titleText="Tower" />
+
+            <TextView
+                android:id="@+id/server"
+                style="@style/Server.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Unraid OS PRO\nVersion 6.8.3"
+                tools:visibility="gone" />
+
+            <TextView
+                android:id="@+id/uptime"
+                style="@style/Server.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="0dp"
+                tools:text="46 days, 18 hours, 49 minutes" />
+
+
+            <include layout="@layout/divider" />
+
+            <!--      UPS      -->
+            <com.advice.array.views.CardHeaderView
+                android:id="@+id/ups_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_baseline_battery_charging_full_24"
+                app:titleText="UPS"
+                tools:subtitleText="UPS Load: 7.0% - 63 Watts" />
+
+            <com.advice.array.views.UPSView
+                android:id="@+id/ups"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <!--    Motherboard    -->
+            <com.advice.array.views.CardHeaderView
+                android:id="@+id/motherboard_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_motherboard"
+                app:titleText="Motherboard" />
+
+            <TextView
+                android:id="@+id/motherboard"
+                style="@style/Server.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="ASUSTeK COMPUTER INC. SABERTOOTH Z77, Version Rev 1.xx\nAmerican Megatrends Inc., Version 1504\nBIOS dated Fri 03 Aug 2012 12:00:00 AM PDT"
+                tools:visibility="gone" />
+
+            <include layout="@layout/divider" />
+
+            <!--  CPU  -->
+            <com.advice.array.views.CardHeaderView
+                android:id="@+id/processor_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_cpu"
+                app:titleText="Processor"
+                tools:subtitleText="Load: 99%" />
+
+            <TextView
+                android:id="@+id/cpu"
+                style="@style/Server.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Intel Core i9-13900K"
+                tools:visibility="gone" />
+
+            <include layout="@layout/divider" />
+
+            <com.advice.array.views.CardHeaderView
+                android:id="@+id/memory_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_ram"
+                app:titleText="Memory"
+                tools:subtitleText="16 GiB DDR3" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/memory_max_size"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="Maximum size:\n32 GiB" />
+
+                <TextView
+                    android:id="@+id/memory_usable_size"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="Usable size:\n15.6 GiB" />
+
+            </LinearLayout>
+
+            <include layout="@layout/divider" />
+
+
+            <!--     todo: improve layout and re-add this information       -->
+            <com.advice.array.views.CardHeaderView
+                android:id="@+id/network_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:icon="@drawable/ic_ethernet"
+                app:titleText="Interface"
+                tools:subtitleText="bond0 Inbound: 31.5 Kbps Outbound 240.3 Mbps" />
+
+            <include
+                layout="@layout/divider"
+                android:visibility="gone" />
+
+            <com.advice.array.views.NavigationView
+                android:id="@+id/settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:navigationLabel="@string/settings" />
+
+            <include layout="@layout/divider" />
+
+            <Button
+                android:id="@+id/reboot"
+                style="@style/Server.Button.Ghost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reboot" />
+
+            <Button
+                android:id="@+id/shutdown"
+                style="@style/Server.Button.Ghost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Shutdown" />
+
+            <include layout="@layout/divider" />
+
+            <Button
+                android:id="@+id/support"
+                style="@style/Server.Button.Logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Support" />
+
+            <Button
+                android:id="@+id/send_logs"
+                style="@style/Server.Button.Logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Send Logs" />
+
+            <include layout="@layout/divider" />
+
+            <Button
+                android:id="@+id/logout"
+                style="@style/Server.Button.Logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign out" />
+
+            <TextView
+                android:id="@+id/version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="16dp"
+                tools:text="Version 0.8.0 (188)" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

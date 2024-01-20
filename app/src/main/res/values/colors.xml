@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--  Colours  -->
+    <color name="unraid_orange">#ff8b2f</color>
+    <color name="unraid_red">#e22828</color>
+    <color name="blue">#486dba</color>
+    <color name="docker_started">#4f8a10</color>
+
+
+    <color name="white_5">#0DFFFFFF</color>
+    <color name="white_20">#30FFFFFF</color>
+
+    <color name="black_5">#0D000000</color>
+    <color name="black_20">#30000000</color>
+
+    <!--  Background  -->
+    <color name="background">#f2f2f2</color>
+    <color name="card_background">#f5f5f5</color>
+
+    <color name="background_pressed">#e0e0e0</color>
+
+    <color name="highlight">@color/black_5</color>
+
+    <!--  Bottom Sheet  -->
+    <color name="notch">@color/black_20</color>
+
+    <!--  Text  -->
+    <color name="text_color">#1c1b1b</color>
+    <color name="text_link">#486dba</color>
+
+    <!--  Progress  -->
+    <color name="progress_background">#dcdcdc</color>
+    <color name="progress_fill">#a8a8a8</color>
+
+
+    <!--  Status  -->
+    <color name="status_active">#4eb04e</color>
+    <color name="status_unassigned">#0099ff</color>
+    <color name="status_paused">#FFCC00</color>
+    <color name="status_stopped">#FF4040</color>
+
+    <!--  Smart  -->
+    <color name="smart_healthy">#4f8a10</color>
+    <color name="smart_error">#ff8c2f</color>
+
+
+    <color name="status_healthy">#4f8a10</color>
+    <color name="divider_color">@color/highlight</color>
+
+    <!--  Edit Text  -->
+    <color name="login_stroke_inactive">#cccccc</color>
+    <color name="login_background_inactive">#f2f2f2</color>
+    <color name="login_stroke_active">#ff8c2f</color>
+
+    <!--  Notifications  -->
+    <color name="notification_normal_background">#e0f3c2</color>
+    <color name="notification_normal_stroke">#578f1a</color>
+    <color name="notification_normal_text_color">#578f1a</color>
+
+    <color name="space_background_color">#292C37</color>
+
+
+</resources>

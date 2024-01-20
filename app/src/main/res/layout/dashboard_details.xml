@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?customBackgroundColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:liftOnScroll="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar"
+            app:menu="@menu/dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentInsetStart="0dp">
+
+            <TextView
+                android:layout_marginStart="48dp"
+                android:id="@+id/toolbar_title"
+                style="@style/ToolbarTitle.Center"
+                android:text="@string/dashboard" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--  CPU  -->
+            <com.advice.array.views.CardHeaderView
+                android:id="@+id/processor_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:subtitleText=""
+                app:titleText="Processor"
+                tools:subtitleText="99%" />
+
+            <com.robinhood.spark.SparkView
+                android:id="@+id/sparkview"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cpu_graph_height"
+                app:spark_animateChanges="false"
+                app:spark_baseLineColor="@color/black_20"
+                app:spark_lineColor="@color/unraid_red" />
+
+            <LinearLayout
+                android:id="@+id/cpu_list_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:visibility="gone">
+
+                <include layout="@layout/divider" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/cpu_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/cpu_view_holder" />
+
+            </LinearLayout>
+
+            <include layout="@layout/divider" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/network_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--  Network  -->
+                <com.advice.array.views.CardHeaderView
+                    android:id="@+id/inbound_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:subtitleText=""
+                    app:titleText="Inbound"
+                    tools:subtitleText="99%" />
+
+                <com.robinhood.spark.SparkView
+                    android:id="@+id/inboundGraph"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/network_graph_height"
+                    app:spark_animateChanges="false"
+                    app:spark_baseLineColor="@color/black_20"
+                    app:spark_lineColor="@color/unraid_red" />
+
+                <com.advice.array.views.CardHeaderView
+                    android:id="@+id/network_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:subtitleText=""
+                    app:titleText="Outbound"
+                    tools:subtitleText="99%" />
+
+                <com.robinhood.spark.SparkView
+                    android:id="@+id/networkGraph"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/network_graph_height"
+                    app:spark_animateChanges="false"
+                    app:spark_baseLineColor="@color/black_20"
+                    app:spark_lineColor="@color/unraid_red" />
+
+
+                <include layout="@layout/divider" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.advice.array.views.CardHeaderView
+                android:id="@+id/memory_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:subtitleText=""
+                app:titleText="Memory"
+                tools:subtitleText="16 GiB DDR3   Utilization: 26%" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <com.advice.array.views.MemoryUsageView
+                    android:id="@+id/memory_ram"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:memory_label="@string/ram" />
+
+                <com.advice.array.views.MemoryUsageView
+                    android:id="@+id/memory_flash"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:memory_label="@string/flash" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <com.advice.array.views.MemoryUsageView
+                    android:id="@+id/memory_log"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:memory_label="@string/log" />
+
+                <com.advice.array.views.MemoryUsageView
+                    android:id="@+id/memory_docker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:memory_label="@string/docker" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

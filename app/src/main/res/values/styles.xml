@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CardRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+
+    <style name="HeaderRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+
+    <style name="CardRow.Header" parent="">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="CardList">
+        <item name="android:clipToPadding">false</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:overScrollMode">never</item>
+    </style>
+
+    <style name="Login.Label" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:textColor">@color/login_color_selector</item>
+    </style>
+
+    <style name="Login.EditText" parent="">
+        <!--        <item name="android:layout_marginStart">32dp</item>-->
+        <!--        <item name="android:layout_marginEnd">32dp</item>-->
+        <!--        <item name="android:layout_marginTop">16dp</item>-->
+        <item name="android:background">@drawable/edit_text_background</item>
+        <!--        <item name="android:textColorHint">@color/black_20</item>-->
+        <!--        <item name="android:textColor">@color/black</item>-->
+    </style>
+
+
+    <style name="Card">
+        <item name="cardBackgroundColor">?customCardColor</item>
+        <item name="cardCornerRadius">?customCardCornerRadius</item>
+        <item name="cardElevation">?customCardElevation</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">4dp</item>
+    </style>
+
+    <style name="EmptyText" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minHeight">60dp</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="RowContainer">
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_dialog</item>
+    </style>
+
+
+    <!--  Lists  -->
+    <style name="List">
+
+    </style>
+
+    <!--  List Items  -->
+    <style name="List.Item">
+
+    </style>
+
+    <!--  List Item  -->
+    <style name="List.Item.Icon">
+        <item name="android:layout_width">@dimen/docker_icon_large</item>
+        <item name="android:layout_height">@dimen/docker_icon_large</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="List.Item.Icon.Tinted">
+        <item name="tint">?attr/colorControlNormal</item>
+    </style>
+
+    <style name="List.Item.Label">
+        <item name="android:textColor">?colorSecondary</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="List.Item.Description">
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="List.Item.Action">
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+        <item name="android:layout_width">@dimen/docker_icon_large</item>
+        <item name="android:layout_height">@dimen/docker_icon_large</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <!--  Action View  -->
+    <style name="ActionView.Icon" parent="">
+        <item name="android:layout_width">@dimen/docker_icon_large</item>
+        <item name="android:layout_height">@dimen/docker_icon_large</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <style name="ActionView.Label" parent="@style/TextAppearance.AppCompat.Body2">
+        <item name="android:textColor">?colorSecondary</item>
+    </style>
+
+    <style name="ActionView.Description" parent="">
+
+    </style>
+
+    <style name="Server.Body" parent="">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+    <style name="Server.Body.Center">
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--  Toolbar  -->
+    <style name="Toolbar">
+        <item name="android:background">?customBackgroundColor</item>
+    </style>
+
+    <style name="ToolbarTitle" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">?colorControlNormal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ToolbarTitle.Center">
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Button" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:background">@drawable/rounded_selectable_ghost_background</item>
+    </style>
+
+
+    <style name="Server.Button" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:background">@drawable/rounded_selectable_ghost_background</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textColor">?colorOnSurface</item>
+    </style>
+
+    <style name="Server.Button.Ghost" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:background">@drawable/rounded_selectable_ghost_background</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textColor">?colorPrimary</item>
+    </style>
+
+    <style name="Server.Button.Logout" parent="Server.Button.Ghost">
+        <item name="backgroundTint">@null</item>
+        <item name="android:textColor">?colorOnSurface</item>
+    </style>
+
+    <style name="PromptView">
+        <item name="prompt_view_background_color">?colorSurface</item>
+        <item name="prompt_view_button_corner_radius">@dimen/background_corner_radius</item>
+        <item name="prompt_view_negative_button_border_color">?colorControlHighlight</item>
+        <item name="prompt_view_negative_button_text_color">?colorOnSurface</item>
+        <item name="prompt_view_positive_button_background_color">?colorPrimary</item>
+        <item name="prompt_view_positive_button_border_color">?colorPrimary</item>
+        <item name="prompt_view_positive_button_text_color">?colorSurface</item>
+        <item name="prompt_view_subtitle_text_color">?colorOnSurface</item>
+        <item name="prompt_view_thanks_display_time_ms">2000</item>
+        <item name="prompt_view_title_text_color">?colorOnSurface</item>
+    </style>
+
+    <style name="DeviceEmpty">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+</resources>

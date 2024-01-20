@@ -1,0 +1,122 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+
+android {
+    compileSdkVersion 34
+
+    defaultConfig {
+        applicationId "com.advice.array"
+        minSdkVersion 19
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.1"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+    namespace 'com.advice.array'
+}
+
+dependencies {
+
+    def koin_version = "3.2.0-beta-1"
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+    // Multidex
+    implementation 'com.android.support:multidex:1.0.3'
+
+    // Encryption
+    implementation "androidx.security:security-crypto:1.1.0-alpha03"
+
+
+    implementation 'androidx.preference:preference-ktx:1.1.1'
+
+    // Firebase
+    implementation platform('com.google.firebase:firebase-bom:29.3.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+
+
+    // Kotlin + coroutines
+    implementation "androidx.work:work-runtime-ktx:2.7.1"
+
+    // Koin
+    implementation "io.insert-koin:koin-android:$koin_version"
+
+//    implementation "org.koin:koin-androidx-scope:$koin_version"
+//    implementation "org.koin:koin-androidx-viewmodel:$koin_version"
+
+    // Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.3"
+
+    // Coil
+    implementation("io.coil-kt:coil:1.1.1")
+
+    // Spark
+    implementation 'com.robinhood.spark:spark:1.2.0'
+
+    // Amplify
+    implementation "com.github.stkent:amplify:2.2.3"
+
+
+    // Lifecycle
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+
+    // JSoup
+    implementation 'org.jsoup:jsoup:1.11.1'
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+
+    implementation "com.squareup.retrofit2:converter-scalars:2.4.0"
+
+    // Logging
+    implementation 'com.jakewharton.timber:timber:5.0.1'
+
+    // Socket
+    implementation 'com.neovisionaries:nv-websocket-client:2.14'
+
+    // Koin testing tools
+    testImplementation "io.insert-koin:koin-test:$koin_version"
+    // Needed JUnit version
+    testImplementation "io.insert-koin:koin-test-junit4:$koin_version"
+
+    testImplementation "io.mockk:mockk:1.12.3"
+
+
+    testImplementation "com.google.truth:truth:1.1.3"
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}
